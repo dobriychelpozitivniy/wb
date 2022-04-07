@@ -1,0 +1,61 @@
+<html>
+    <body>
+
+        <h1>OrderUID: {{.Entry}}</h1>
+        <hr>
+        <h3>Track Number: {{.TrackNumber}}</h3>
+        <h3>Entry: {{.Entry}}</h3>
+        <h3>Locale: {{.Locale}}</h3>
+        <h3>Internal Signature: {{.InternalSignature}}</h3>
+        <h3>CustomerID: {{.CustomerID}}</h3>
+        <h3>Delivery Service: {{.DeliveryService}}</h3>
+        <h3>Shard Key: {{.ShardKey}}</h3>
+        <h3>SmID: {{.SmID}}</h3>
+        <h3>Date Created: {{.TrackNumber}}</h3>
+        <h3>OofShard: {{.OofShard}}</h3>
+
+        <hr>
+        <h2>Delivery: </h2>
+        <hr>
+        <h3>Name: {{.Delivery.Name}}</h3>
+        <h3>Phone: {{.Delivery.Phone}}</h3>
+        <h3>Zip: {{.Delivery.Zip}}</h3>
+        <h3>City: {{.Delivery.City}}</h3>
+        <h3>Address: {{.Delivery.Address}}</h3>
+        <h3>Region: {{.Delivery.Region}}</h3>
+        <h3>Email: {{.Delivery.Email}}</h3>
+
+        <hr>
+        <h2>Payment: </h2>
+        <hr>
+        <h3>Transaction: {{.Payment.Transaction}}</h3>
+        <h3>RequestID: {{.Payment.RequestID}}</h3>
+        <h3>Currency: {{.Payment.Currency}}</h3>
+        <h3>Provider: {{.Payment.Provider}}</h3>
+        <h3>Amount: {{.Payment.Amount}}</h3>
+        <h3>PaymentDT: {{.Payment.PaymentDT}}</h3>
+        <h3>Bank: {{.Payment.Bank}}</h3>
+        <h3>DeliveryCost: {{.Payment.DeliveryCost}}</h3>
+        <h3>GoodsTotal: {{.Payment.GoodsTotal}}</h3>
+        <h3>CustomFee: {{.Payment.CustomFee}}</h3>
+
+        <hr>
+        <h2>Items: </h2>
+        <hr>
+        {{range $index, $value := .Items}}
+            <h3>ChrtID: {{$value.ChrtID}}</h3>
+            <h3>Track Number: {{$value.TrackNumber}}</h3>
+            <h3>Price: {{$value.Price}}</h3>
+            <h3>RID: {{$value.RID}}</h3>
+            <h3>Name: {{$value.Name}}</h3>
+            <h3>Sale: {{$value.Sale}}</h3>
+            <h3>Size: {{$value.Size}}</h3>
+            <h3>Total Price: {{$value.TotalPrice}}</h3>
+            <h3>NMID: {{$value.NMID}}</h3>
+            <h3>Brand: {{$value.Brand}}</h3>
+            <h3>Status: {{$value.Status}}</h3>
+            <hr>
+        {{end}}
+
+    </body>
+</html>
