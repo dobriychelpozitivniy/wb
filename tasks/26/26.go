@@ -16,9 +16,9 @@ func main() {
 }
 
 func checkUnique(s string) bool {
-
+	s = strings.ReplaceAll(s, " ", "")
 	s = strings.ToLower(s)
-	arr := []byte(s)
+	arr := []rune(s)
 	sort.Slice(arr, func(i, j int) bool { return arr[i] < arr[j] })
 
 	for i := 0; i < len(arr)-1; i++ {
